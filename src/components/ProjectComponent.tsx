@@ -6,7 +6,7 @@ export const ProjectComponent =() => {
     return (
         <div className="p-4">
             
-        <div className="h-fit w-96 border-2 rounded-2xl p-4">
+        <div className="h-fit w-96 border-2 border-white text-white rounded-2xl p-4">
             <div>
                 <div >
                     <img src={Homepage} alt="" className="rounded-2xl p-2" />
@@ -22,7 +22,7 @@ export const ProjectComponent =() => {
                 <div className="px-2 py-1 italic">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt amet officiis sequi, natus necessitatibus temporibus doloremque autem iusto eum qui dolor pariatur at ad voluptate corporis rem quibusdam doloribus ab!
                 </div>
-                <div className="text-white font-serif text-sm flex gap-2 px-2 ">
+                <div className="text-white font-serif text-sm flex gap-2 px-2 pt-2">
                 <TechStackButton name="React" />
                 <TechStackButton name="Nodejs" />
                 <TechStackButton name="Mongoose" />

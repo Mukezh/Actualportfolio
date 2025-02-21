@@ -48,7 +48,7 @@ const Homepage = () => {
             Mukesh
             </div>
             <div className='text-2xl py-4 animate-pulse'>
-                Dev
+                Developer
             </div>
             <div className='flex flex-col py-2'>
                 <div className='flex space-x-4'>
