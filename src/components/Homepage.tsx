@@ -3,6 +3,7 @@ import { Github } from '../assets/icons/github';
 import { LinkedIn } from '../assets/icons/linkedIn';
 import { Email } from '../assets/icons/email';
 import { Arrow } from '../assets/icons/arrow';
+import LoadingScreen from './Landing';
 
 const Homepage = () => {
     const stars = Array.from({ length: 100 }, (_, i) => ({
@@ -36,7 +37,11 @@ const Homepage = () => {
             >
             </motion.div>
           ))}
-          <div className='text-white flex flex-col text-7xl justify-center items-center h-screen font-serif'> 
+          <div>
+          <div className='pt-24'>
+          <LoadingScreen />
+            </div>
+          <div className='text-white -pt-48 flex flex-col text-7xl justify-center items-center h-screen font-serif'> 
             <div>
             Mukesh
             </div>
@@ -70,7 +75,7 @@ const Homepage = () => {
                 </a>
                 </motion.div>
           </div>
-          
+          </div>
         </div>
       );
 }

@@ -1,24 +1,91 @@
-import { MagicSphere } from "@magiclabs/ui";
-import { FaReact, FaNodeJs, FaPython, FaGithub, FaDocker } from "react-icons/fa";
-import { SiNextdotjs, SiTypescript, SiPostgresql, SiTailwindcss, SiMysql } from "react-icons/si";
+import { useEffect, useMemo, useState } from "react";
 
-const IconCloud = () => {
-  return (
-    <div className="flex items-center justify-center min-h-screen bg-black">
-      <MagicSphere className="w-[400px] h-[400px]">
-        <FaReact size={50} color="#61DBFB" />
-        <SiNextdotjs size={50} color="white" />
-        <FaNodeJs size={50} color="#8CC84B" />
-        <SiTypescript size={50} color="#3178C6" />
-        <FaPython size={50} color="#FFD43B" />
-        <FaGithub size={50} color="white" />
-        <FaDocker size={50} color="#0db7ed" />
-        <SiPostgresql size={50} color="#336791" />
-        <SiTailwindcss size={50} color="#38B2AC" />
-        <SiMysql size={50} color="#00758F" />
-      </MagicSphere>
-    </div>
-  );
+
+import {
+  Cloud,
+  fetchSimpleIcons,
+  ICloud,
+  renderSimpleIcon,
+  SimpleIcon,
+} from "react-icon-cloud";
+
+export const cloudProps: Omit<ICloud, "children"> = {
+  containerProps: {
+    style: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "80%",
+      paddingTop: 40,
+    },
+  },
+  options: {
+    reverse: true,
+    depth: 1,
+    wheelZoom: false,
+    imageScale: 2,
+    activeCursor: "default",
+    tooltip: "native",
+    initial: [0.1, -0.1],
+    clickToFront: 500,
+    tooltipDelay: 0,
+    outlineColour: "#ffffff",
+    maxSpeed: 0.04,
+    minSpeed: 0.02,
+    // dragControl: false,
+  },
 };
 
-export default IconCloud;
+export const renderCustomIcon = (icon: SimpleIcon) => {
+  // const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
+  // const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
+  // const minContrastRatio = theme === "dark" ? 2 : 1.2;
+
+  const bgHex = "#ffffff";
+  const fallbackHex = "#ffffff";
+  const minContrastRatio = 2;
+
+  return renderSimpleIcon({
+    icon,
+    bgHex,
+    fallbackHex,
+    minContrastRatio,
+    size: 24,
+    aProps: {
+      href: undefined,
+      target: undefined,
+      rel: undefined,
+      onClick: (e: any) => e.preventDefault(),
+    },
+  });
+};
+
+export type DynamicCloudProps = {
+  iconSlugs: string[];
+};
+
+type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
+
+export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
+  const [data, setData] = useState<IconData | null>(null);
+  
+
+  useEffect(() => {
+    fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
+  }, [iconSlugs]);
+
+  const renderedIcons = useMemo(() => {
+    if (!data) return null;
+
+    return Object.values(data.simpleIcons).map((icon) =>
+      renderCustomIcon(icon)
+    );
+  }, [data]);
+
+  return (
+    
+    <Cloud {...cloudProps}>
+      <>{renderedIcons}</>
+    </Cloud>
+  );
+}
