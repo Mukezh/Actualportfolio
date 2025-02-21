@@ -4,6 +4,7 @@ import { LinkedIn } from '../assets/icons/linkedIn';
 import { Email } from '../assets/icons/email';
 import { Arrow } from '../assets/icons/arrow';
 import LoadingScreen from './Landing';
+import About from './About';
 
 const Homepage = () => {
     const stars = Array.from({ length: 100 }, (_, i) => ({
@@ -14,6 +15,7 @@ const Homepage = () => {
       }));
     
       return (
+        <>
         <div className="relative inset-0 overflow-hidden h-screen bg-black">
           {stars.map((star) => (
             <motion.div
@@ -41,18 +43,18 @@ const Homepage = () => {
           <div className='pt-24'>
           <LoadingScreen />
             </div>
-          <div className='text-white -pt-48 flex flex-col text-7xl justify-center items-center h-screen font-serif'> 
+          <div className='text-white -pt-48 flex flex-col text-7xl justify-center items-center h-screen font-serif '> 
             <div>
             Mukesh
             </div>
-            <div className='text-4xl py-4'>
+            <div className='text-2xl py-4 animate-pulse'>
                 Dev
             </div>
             <div className='flex flex-col py-2'>
                 <div className='flex space-x-4'>
-                <Github />
-                <LinkedIn />
-                <Email />
+                <a href="https://github.com/mukezh"><Github /></a>
+                <a href="https://www.linkedin.com/in/mukeshbabu/"><LinkedIn /></a>
+                <a href="mailto:mukesh.offcl@gmail.com"><Email /></a>
                 </div>
             </div>
             {/* <div className='absolute text-white flex justify-center items-center bottom-0 pb-6'>
@@ -60,7 +62,7 @@ const Homepage = () => {
                 <Arrow />
             </a>
             </div> */}
-            <motion.div
+            {/* <motion.div
                 className="absolute text-white flex justify-center items-center bottom-0 pb-6"
                 animate={{ y: [0, -10, 0] }} 
                 transition={{
@@ -69,14 +71,19 @@ const Homepage = () => {
                     repeatType: "reverse",
                     ease: "easeInOut",
                 }}
-                >
-                <a href="">
+                > */}
+                <a href="#about" className='animate-bounce absolute text-white flex justify-center items-center bottom-0 pb-6'>
                     <Arrow />
                 </a>
-                </motion.div>
+                {/* </motion.div> */}
           </div>
           </div>
+          
         </div>
+        <div id='about'>
+        <About />
+        </div>
+        </>
       );
 }
 
