@@ -19,7 +19,7 @@ jobs:
                 chmod 600 awskey.pem
             
             - name: copy files to aws via ssh
-              uses: applyboy/scp-action@v0.1.4
+              uses: appleboy/scp-action@v0.1.4
               with:
                 host: ${{ secrets.AWS_HOST }}
                 username: ${{ secrets.AWS_USER }}
