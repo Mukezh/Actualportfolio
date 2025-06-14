@@ -43,7 +43,7 @@ const Homepage = () => {
           <div className='pt-24'>
           <LoadingScreen />
             </div>
-          <div className='text-white -pt-48 flex flex-col text-7xl justify-center items-center h-screen font-serif '> 
+          <div className='text-white -mt-48 flex flex-col text-7xl justify-center items-center h-screen font-serif '>
             <div>
             Mukesh
             </div>
