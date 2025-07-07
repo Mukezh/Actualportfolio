@@ -43,8 +43,7 @@ const Homepage = () => {
               }}
             />
           ))}
-<<<<<<< HEAD
-=======
+
           <div>
           <div className='pt-24'>
           <LoadingScreen />
@@ -84,7 +83,7 @@ const Homepage = () => {
                 {/* </motion.div> */}
           </div>
           </div>
->>>>>>> 926847aabdbc53dadedab8d3da911dfba27158d1
+
           
           {/* Background Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40" />
