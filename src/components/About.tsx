@@ -62,7 +62,7 @@ export default function About() {
             >
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                     <div>
-                        <h2 className="text-3xl font-serif text-white mb-6">Skills & Technologies</h2>
+                        <h2 className="text-3xl font-serif text-white mb-6 px-4 pb-32">Skills & Technologies</h2>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                             {[
                                 { name: "React", icon: "bg-cyan-400" },
@@ -126,7 +126,7 @@ export default function About() {
                                 transition={{ duration: 0.2 }}
                             >
                                 <span className="text-blue-400 text-lg">•</span>
-                                <span>Led migration of a React-based analytics dashboard to Power BI, reducing front-end maintenance costs by 30% and improving data visualization capabilities.</span>
+                                <span>Built scalable React components, enforced ESLint standards, and added Jest tests and documentation, reducing dev time by 30%, increasing code coverage to 85%, and cutting review time by 40%.</span>
                             </motion.li>
                             <motion.li 
                                 className="flex items-start space-x-3"
@@ -134,7 +134,7 @@ export default function About() {
                                 transition={{ duration: 0.2 }}
                             >
                                 <span className="text-blue-400 text-lg">•</span>
-                                <span>Authored complex SQL views and stored procedures to streamline data extraction for reporting needs.</span>
+                                <span>Refactored and indexed complex SQL queries in SSMS, reducing average query response time by 30% and improving backend performance.</span>
                             </motion.li>
                             <motion.li 
                                 className="flex items-start space-x-3"
@@ -142,7 +142,7 @@ export default function About() {
                                 transition={{ duration: 0.2 }}
                             >
                                 <span className="text-blue-400 text-lg">•</span>
-                                <span>Debugged and resolved 15+ UI/UX issues in multiple React applications, improving cross-browser compatibility and load times.</span>
+                                <span>Integrated RESTful APIs into React components using Axios and Redux, enabling seamless dynamic data rendering across 5+ UI screens.</span>
                             </motion.li>
                             <motion.li 
                                 className="flex items-start space-x-3"
@@ -150,8 +150,41 @@ export default function About() {
                                 transition={{ duration: 0.2 }}
                             >
                                 <span className="text-blue-400 text-lg">•</span>
-                                <span>Collaborated with backend teams to integrate .NET APIs with front-end components, ensuring seamless data flow and functionality.</span>
+                                <span>Resolved critical UI/UX bugs using Chrome DevTools and Redux logs, optimized layout performance using lighthouse, and closed 20+ ServiceNow tickets weekly without breaching SLA.</span>
                             </motion.li>
+                            <motion.li 
+                                className="flex items-start space-x-3"
+                                whileHover={{ x: 5 }}
+                                transition={{ duration: 0.2 }}
+                            >
+                                <span className="text-blue-400 text-lg">•</span>
+                                <span>Led critical infrastructure migration by updating configs, managing server provisioning, DNS, and testing—completed in under 4 hours with zero downtime.</span>
+                            </motion.li>
+                            <motion.li 
+                                className="flex items-start space-x-3"
+                                whileHover={{ x: 5 }}
+                                transition={{ duration: 0.2 }}
+                            >
+                                <span className="text-blue-400 text-lg">•</span>
+                                <span>Redesigned reporting in Power BI by translating business logic into SQL views and integrating via Direct Query, delivering 10+ real-time dashboards for leadership.</span>
+                            </motion.li>
+                            <motion.li 
+                                className="flex items-start space-x-3"
+                                whileHover={{ x: 5 }}
+                                transition={{ duration: 0.2 }}
+                            >
+                                <span className="text-blue-400 text-lg">•</span>
+                                <span>Automated user deactivation with SQL stored procedures, reducing manual work by 8 hours/week and improving compliance for 500+ users.</span>
+                            </motion.li>
+                            <motion.li 
+                                className="flex items-start space-x-3"
+                                whileHover={{ x: 5 }}
+                                transition={{ duration: 0.2 }}
+                            >
+                                <span className="text-blue-400 text-lg">•</span>
+                                <span>Created a SSIS package to automate retrieval of historical data from GCP BigQuery Data Lake, eliminating 8 hours/week of manual effort and accelerating data availability.</span>
+                            </motion.li>
+
                         </ul>
                     </div>
                 </div>

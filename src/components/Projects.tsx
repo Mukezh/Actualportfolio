@@ -2,40 +2,32 @@ import { motion } from "framer-motion";
 import { ProjectComponent } from "./ProjectComponent"
 
 const projectsData = [
+    
     {
         id: 1,
-        title: "Portfolio Website",
-        description: "A modern, responsive portfolio website built with React and Framer Motion featuring smooth animations and dark theme design.",
-        image: "/public/Homepage.jpg",
-        technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-        githubUrl: "https://github.com/mukezh/portfolio",
+        title: "NBA 96'",
+        description: "A RAG chatbot which provides information about the NBA 96' season, built with Next.js, TypeScript, and OpenAI API.",
+        image: "/public/snip.png",
+        technologies: ["Reactjs", "TypeScript", "OpenAI API", "Tailwind CSS"],
+        githubUrl: "https://github.com/mukezh/nba96",
         liveUrl: "#"
     },
     {
         id: 2,
-        title: "E-Commerce Platform",
-        description: "Full-stack e-commerce solution with user authentication, payment integration, and admin dashboard.",
-        image: "/public/Homepage.jpg",
-        technologies: ["Next.js", "PostgreSQL", "Prisma", "Stripe"],
-        githubUrl: "https://github.com/mukezh",
+        title: "Pensieve",
+        description: "A real-time chat application built with React, Node.js, and Socket.io, allowing users to communicate in real-time with a modern UI.",
+        image: "/public/snip.png",
+        technologies: ["React", "Node.js", "Socket.io", "Express", "MongoDB"],
+        githubUrl: "https://github.com/mukezh/chat-app",
         liveUrl: "#"
     },
     {
-        id: 3,
-        title: "Task Management App",
-        description: "Collaborative task management application with real-time updates and team collaboration features.",
-        image: "/public/Homepage.jpg",
-        technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-        githubUrl: "https://github.com/mukezh",
-        liveUrl: "#"
-    },
-    {
-        id: 4,
-        title: "Data Analytics Dashboard",
-        description: "Interactive dashboard for data visualization and analytics with Power BI integration and custom charts.",
-        image: "/public/Homepage.jpg",
-        technologies: ["React", "D3.js", "Power BI", "Express.js"],
-        githubUrl: "https://github.com/mukezh",
+        id: 3, 
+        title: "Remember",
+        description: "A personal note-taking application that allows users to create, edit, and delete notes with a clean and intuitive interface.",
+        image: "/public/snip.png",
+        technologies: ["React","Tailwind CSS", "MongoDB", "Express.js", "Node.js"],
+        githubUrl: "",
         liveUrl: "#"
     }
 ];

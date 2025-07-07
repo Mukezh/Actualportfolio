@@ -94,15 +94,15 @@ export const Footer = () => {
                 </motion.div>
             </div>
             
-            <motion.div 
+            {/* <motion.div 
                 className="mt-8 pt-6 border-t border-gray-800 text-center text-gray-400 text-xs sm:text-sm"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
                 viewport={{ once: true }}
             >
-                © 2025 Mukesh. Built with React & Framer Motion.
-            </motion.div>
+                © {new Date().getFullYear()} Mukesh.
+            </motion.div> */}
         </div>
     )
 }
