@@ -7,8 +7,8 @@ import LoadingScreen from './Landing';
 import About from './About';
 
 const Homepage = () => {
-    // Reduce stars on mobile for better performance
-    const starCount = typeof window !== 'undefined' && window.innerWidth < 768 ? 50 : 100;
+
+  const starCount = typeof window !== 'undefined' && window.innerWidth < 768 ? 50 : 100;
     const stars = Array.from({ length: starCount }, (_, i) => ({
         id: i,
         x: Math.random() * 100,
@@ -20,7 +20,6 @@ const Homepage = () => {
       return (
         <>
         <div className="relative inset-0 overflow-hidden h-screen bg-gradient-to-b from-black via-gray-900 to-black">
-          {/* Improved Stars Animation */}
           {stars.map((star) => (
             <motion.div
               key={star.id}
@@ -62,30 +61,14 @@ const Homepage = () => {
                 <a href="mailto:mukesh.offcl@gmail.com"><Email /></a>
                 </div>
             </div>
-            {/* <div className='absolute text-white flex justify-center items-center bottom-0 pb-6'>
-            <a href="">
-                <Arrow />
-            </a>
-            </div> */}
-            {/* <motion.div
-                className="absolute text-white flex justify-center items-center bottom-0 pb-6"
-                animate={{ y: [0, -10, 0] }} 
-                transition={{
-                    duration: 1.2,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    ease: "easeInOut",
-                }}
-                > */}
+{/* 
                 <a href="#about" className='animate-bounce absolute text-white flex justify-center items-center bottom-0 pb-6'>
                     <Arrow />
-                </a>
-                {/* </motion.div> */}
+                </a> */}
           </div>
           </div>
 
           
-          {/* Background Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40" />
           
           <div className="relative z-10">

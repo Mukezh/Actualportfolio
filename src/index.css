@@ -3,3 +3,12 @@
 body {
   font-family: 'IBM Plex Mono', monospace;
 }
+
+/* Hide scrollbars globally */
+html, body, * {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar, *::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
