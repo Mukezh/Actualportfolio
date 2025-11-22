@@ -62,7 +62,7 @@ export default function About() {
             >
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                     <div>
-                        <h2 className="text-3xl font-serif text-white mb-6 px-4 pb-32">Skills & Technologies</h2>
+                        <h2 className="text-3xl font-serif text-white mb-6">Skills & Technologies</h2>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                             {[
                                 { name: "React", icon: "bg-cyan-400" },
